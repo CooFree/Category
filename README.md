@@ -20,7 +20,11 @@
 
 |类名|功能|实现|
 |:--:|:--:|--|
-|UIImage+CFImage|模糊透明背景图|-(UIImage*)imageWithView(UIView*)view{<br>UIGraphicsBeginImageContextWithOptions(CGSizeMake(view.frame.size.width, view.frame.size.height), NO, [[UIScreen mainScreen] scale]);<br>[view.layer renderInContext:UIGraphicsGetCurrentContext()];<br>UIImage*image=UIGraphicsGetImageFromCurrentImageContext();<br>UIColor*tintColor=[UIColor colorWithWhite:0.95 alpha:0.78];<br>image = [image applyBlurWithRadius:15 tintColor:tintColor saturationDeltaFactor:1 maskImage:nil];<br>UIGraphicsEndImageContext();<br>return image;}<br>|
+|UIImage+ImageEffects|模糊透明背景图|UIImage *blurSnapshotImage = [image applyBlurWithRadius:5.0f
+tintColor:[UIColor colorWithWhite:0.2f
+alpha:0.7f]
+saturationDeltaFactor:1.8f
+maskImage:nil];|
 
 
 
