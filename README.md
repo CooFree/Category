@@ -20,11 +20,8 @@
 
 |类名|功能|实现|
 |:--:|:--:|--|
-|UIImage+ImageEffects|模糊透明背景图|UIImage *blurSnapshotImage = [image applyBlurWithRadius:5.0f
-tintColor:[UIColor colorWithWhite:0.2f
-alpha:0.7f]
-saturationDeltaFactor:1.8f
-maskImage:nil];|
+|UIImage+ImageEffects|模糊透明背景图|UIImage *blurSnapshotImage = [image applyBlurWithRadius:5.0f tintColor:[UIColor colorWithWhite:0.2f alpha:0.7f] saturationDeltaFactor:1.8f maskImage:nil];|
+
 
 
 
