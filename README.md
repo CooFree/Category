@@ -7,6 +7,7 @@
 *  [UIImage](#UIImage)
 *  [UIView](#UIView)
 *  [UILabel](#UILabel)
+*  [CAAnimation](#CAAnimation)
 
 ## <a name = "UIScrollView">UIScrollView
 
@@ -39,4 +40,9 @@
 |UILabel+Addition|一句代码创建|+ (instancetype)labelWithFont:(UIFont*)font               <br>textColor:(UIColor*)textColor           <br>textAlignment:(NSTextAlignment)textAlignment;|
 
 
+## <a name = "CAAnimation">CAAnimation
+ 
+ |类名|功能|实现|
+|:--:|:--:|--|
+|CAAnimation+CooFree|动画|+(CABasicAnimation*)rotationAnim;//翻转<br>+(CABasicAnimation*)rotaAnim;//旋转<br>+(CAKeyframeAnimation*)shakeAnim;//抖动|
 
