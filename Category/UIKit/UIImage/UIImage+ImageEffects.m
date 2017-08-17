@@ -94,7 +94,8 @@
  */
 
 #import "UIImage+ImageEffects.h"
-#import "SCLMacros.h"
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 #if defined(__has_feature) && __has_feature(modules)
 @import Accelerate;
