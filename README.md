@@ -157,12 +157,10 @@ __________________________________________________________________
  
   *  UIImageView+CornerRadius  //任意切角
   ```
-  UIImageView *imageView = [[UIImageView alloc] initWithRoundingRectImageView];  //圆
-  
-  UIImageView *imageViewSecond = [[UIImageView alloc] initWithCornerRadiusAdvance:20.f 
+  UIImageView*imageView=[[UIImageView alloc]initWithRoundingRectImageView];
+  UIImageView*imageViewSecond=[[UIImageView alloc]initWithCornerRadiusAdvance:20.f 
                                                                    rectCornerType:UIRectCornerBottomLeft | UIRectCornerTopRight];
   ```
-  
  
 
 * <a name = "UILabel">UILabel
