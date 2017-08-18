@@ -28,9 +28,12 @@ __________________________________________________________________
    *  [CAAnimation](#CAAnimation)
 
 *  [UIKit](#UIKit)
+   *  [UIDevice](#UIDevice)
+   *  [UIColor](#UIColor)
    *  [UIView](#UIView)
    *  [UIScrollView](#UIScrollView)
    *  [UIImage](#UIImage)
+   *  [UIImageView](#UIImageView)
    *  [UILabel](#UILabel)
 
 __________________________________________________________________
@@ -39,15 +42,89 @@ __________________________________________________________________
 * <a name = "CAAnimation">CAAnimation
  
    *  CAAnimation+CooFree
-      ```
-      [self.iconImageV.layer addAnimation:[CAAnimation rotationAnim] forKey:@"rotationAnim"];//翻转
-      [self.layer addAnimation:    [CAAnimation rotaAnim] forKey:@"rotaAnim"];//旋转
-      [self.iconImageV.layer addAnimation:[CAAnimation shakeAnim] forKey:@"shakeAnim"];//抖动
-      ```
+   ```
+   [self.iconImageV.layer addAnimation:[CAAnimation rotationAnim] forKey:@"rotationAnim"];//翻转
+   [self.layer addAnimation:    [CAAnimation rotaAnim] forKey:@"rotaAnim"];//旋转
+   [self.iconImageV.layer addAnimation:[CAAnimation shakeAnim] forKey:@"shakeAnim"];//抖动
+   ```
 
 __________________________________________________________________
 ## <a name = "UIKit">☞☞☞UIKit 
  
+* <a name = "UIDevice">UIDevice
+ 
+  *  UIDevice+JYInfo
+  ```
+  // 设备的名称
+  + (NSString *)getDeviceName;
+  
+  // 设备类型
+  + (NSString *)getDeviceTypeName;
+  
+  // 获取BundleID
+  + (NSString*)getBundleID;
+  
+  // app版本号
+  + (NSString *)getAPPVerion;
+  
+  // app_build版本号
+  + (NSString *)getAPPBuildVersion;
+  
+  // app名字
+  + (NSString *)getAPPName;
+  
+  // 设备UUID
+  + (NSString *)getiPhoneUUID;
+  
+  // 设备系统版本
+  + (NSString *)getSystemVersion;
+  
+  // 获取电池剩余电量
+  + (CGFloat)getBatteryLevel;
+  
+  // 获取手机IP
+  + (NSString *)getDeviceIPAdress;
+  
+  // 获取总内存大小(单位：字节 B)
+  + (long long)getTotalMemorySize;
+  
+  // 获取当前可用内存(单位：字节 B)
+  + (long long)getAvailableMemorySize;
+  
+  // 获取总磁盘容量(单位：字节 B)
+  + (long long)getTotalDiskSize;
+  
+  // 获取可用磁盘容量(单位：字节 B)
+  + (long long)getAvailableDiskSize;
+  
+  // 获取精准电池电量
+  + (CGFloat)getCurrentBatteryLevel;
+
+  // 获取当前语言
+  + (NSString *)getDeviceLanguage;
+
+  // 获取运营商名称
+  + (NSString *)getCarrierName;
+
+  // 获取网络类型(确保statusbar没有隐藏，否则获取不到）
+  + (NetworkType)getNetworkType;
+
+  // 获取网络类型名称(确保statusbar没有隐藏，否则获取不到）
+  + (NSString *)getNetworkTypeName;
+  ```
+ 
+* <a name = "UIColor">UIColor
+ 
+  *  UIColor+JYCommon
+  ```
+  // 根据十六进制数 生成颜色类 如：0xff1fb6c1
+  + (UIColor *)colorWithCode:(NSUInteger)hex;
+  // 根据RGBHex 生成颜色类 如：000000
+  + (UIColor *)colorWithRGBHexStr:(NSString *)str;
+  //随机颜色
+  + (UIColor *)getJYRandomColor;
+  ```
+  
 * <a name = "UIView">UIView 
 
   *  UIView+CFAnimation
@@ -74,6 +151,19 @@ __________________________________________________________________
                                              saturationDeltaFactor:1.8f   
                                              maskImage:nil];
   ```
+
+
+* <a name = "UIImageView">UIImageView
+ 
+  *  UIImageView+CornerRadius  //任意切角
+  ```
+  UIImageView *imageView = [[UIImageView alloc] initWithRoundingRectImageView];  //圆
+  
+  UIImageView *imageViewSecond = [[UIImageView alloc] initWithCornerRadiusAdvance:20.f 
+                                                                   rectCornerType:UIRectCornerBottomLeft | UIRectCornerTopRight];
+  ```
+  
+ 
 
 * <a name = "UILabel">UILabel
 
