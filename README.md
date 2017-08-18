@@ -29,6 +29,7 @@ __________________________________________________________________
 
 *  [UIKit](#UIKit)
    *  [UIDevice](#UIDevice)
+   *  [UIApplication](#UIApplication)
    *  [UIColor](#UIColor)
    *  [UIView](#UIView)
    *  [UIScrollView](#UIScrollView)
@@ -50,7 +51,7 @@ __________________________________________________________________
 
 __________________________________________________________________
 ## <a name = "UIKit">☞☞☞UIKit 
- 
+  
 * <a name = "UIDevice">UIDevice
  
   *  UIDevice+JYInfo
@@ -113,6 +114,24 @@ __________________________________________________________________
   + (NSString *)getNetworkTypeName;
   ```
  
+* <a name = "UIApplication">UIApplication
+  
+  *  UIApplication+JYHandle
+  ```
+  // 应用程序之间跳转(如调起电话：tel://1234567890 )
+  + (void)quickOpenURLString:(NSString *)urlString;
+
+  // 跳转到app设置页面
+  + (void)goToAppSetting;
+
+  // 拨打电话
+  + (void)goToTelephone:(NSString *)telephone;
+
+  // 跳转系统设置中相关功能的设置
+  + (void)goToSettingWith:(JYPrefsType)prefsType;
+  ```
+  
+  
 * <a name = "UIColor">UIColor
  
   *  UIColor+JYCommon
