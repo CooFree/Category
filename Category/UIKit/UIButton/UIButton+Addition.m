@@ -116,9 +116,11 @@ static char buttonBlockKey;
     }
     if (normalColor && title) {
         [button setTitleColor:normalColor forState:UIControlStateNormal];
+        [button setTitleColor:normalColor forState:UIControlStateNormal|UIControlStateHighlighted];
     }
     if (selectedColor && title) {
         [button setTitleColor:selectedColor forState:UIControlStateSelected];
+        [button setTitleColor:selectedColor forState:UIControlStateSelected|UIControlStateHighlighted];
     }
     button.titleLabel.font = [UIFont systemFontOfSize:fontSize];
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
