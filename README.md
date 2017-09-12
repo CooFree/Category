@@ -37,6 +37,12 @@ __________________________________________________________________
    *  [UIImage](#UIImage)
    *  [UIImageView](#UIImageView)
    *  [UILabel](#UILabel)
+   
+*  [Foundation](#Foundation)
+   *  [NSDate](#NSDate)
+   *  [NSTimer](#NSTimer)
+
+
 
 __________________________________________________________________
 ## <a name = "QuartzCore">☞☞☞QuartzCore
@@ -193,4 +199,13 @@ __________________________________________________________________
   ```
 
 
+* <a name = "NSDate">NSDate 
+ 
+  *  NSDate+JYHandle
+  ```
+  //判断与某一天是否为同一周
+  - (BOOL)sameWeekWithDate:(NSDate *)otherDate;
+  //判断与某一天是否为同一月
+  - (BOOL)sameMonthWithDate:(NSDate *)otherDate;
+  ```
 
