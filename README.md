@@ -208,4 +208,16 @@ __________________________________________________________________
   //判断与某一天是否为同一月
   - (BOOL)sameMonthWithDate:(NSDate *)otherDate;
   ```
+  
+* <a name = "NSTimer">NSTimer
+ 
+  *  NSTimer+Weak
+  ```
+  // 计时器SEL(弱引用，页面销毁可以不用手动释放计时器)
+  + (NSTimer *)weakTimerWithTimeInterval:(NSTimeInterval)interval
+                                target:(id)aTarget
+                              selector:(SEL)aSelector
+                              userInfo:(id)userInfo
+                               repeats:(BOOL)repeats;
+  ```
 
