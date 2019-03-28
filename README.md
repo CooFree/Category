@@ -221,3 +221,7 @@ __________________________________________________________________
                                repeats:(BOOL)repeats;
   ```
 
+
+
+
+https://github.com/leeSmile/tools/tree/master/textTools
